@@ -2,20 +2,27 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fruits Index</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruits Index</title>
+</head>
 <!-- views/fruits/index.ejs -->
+
 <body>
-  <h1>All Fruits</h1>
   <a href="/index">Home</a>
   <a href="/fruits/new">Add New Fruit</a>
+  <h1>All Fruits</h1>
+  <div style="display: flex; flex-direction: column;">
+  </div>
   <ul>
-    <% fruits.forEach(fruit => { %>
-      <li><%= fruit.name %></li>
-    <% }); %>
+    <% fruits.forEach(fruit=> { %>
+      <li><a href="/fruits/<%= fruit._id %>">
+          <%= fruit.name %>
+        </a></li>
+      <% }); %>
   </ul>
 </body>
+
 </html>
