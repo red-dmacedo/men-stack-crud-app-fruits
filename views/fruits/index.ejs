@@ -1,0 +1,21 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruits Index</title>
+  </head>
+<!-- views/fruits/index.ejs -->
+<body>
+  <h1>All Fruits</h1>
+  <a href="/index">Home</a>
+  <a href="/fruits/new">Add New Fruit</a>
+  <ul>
+    <% fruits.forEach(fruit => { %>
+      <li><%= fruit.name %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
